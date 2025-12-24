@@ -56,7 +56,8 @@ class HDWallet {
         const I = hmac.update(data).digest();
 
         // Left 32 bytes = child private key
-        const childPrivateKeyInt = (BigInt('0x' + parentPrivateKey) + BigInt('0x' + I.slice(0, 32).toString('hex'))) % ec.n;
+        const modN = BigInt('0x' + ec.n.toString(16));
+        const childPrivateKeyInt = (BigInt('0x' + parentPrivateKey) + BigInt('0x' + I.slice(0, 32).toString('hex'))) % modN;
         const childPrivateKey = childPrivateKeyInt.toString(16).padStart(64, '0');
 
         return childPrivateKey;

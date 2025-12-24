@@ -27,6 +27,10 @@ const charlieKey = ec.keyFromPrivate(charlieWallet.privateKey, 'hex');
 const miner1Key = ec.keyFromPrivate(miner1Wallet.privateKey, 'hex');
 const miner2Key = ec.keyFromPrivate(miner2Wallet.privateKey, 'hex');
 
+// Use friendly miner names
+const MINER_PRIMARY = 'sparkcov';
+const MINER_SECONDARY = 'sparkcov2';
+
 console.log("👛 Demo wallets created with cryptographic addresses\n");
 
 // Scenario 1: Alice sends to Bob
@@ -36,22 +40,22 @@ afrocoin.send(aliceWallet.address, bobWallet.address, 10, aliceKey);
 console.log("📝 Transaction 2: Alice → Charlie (5 Afrocoins)");
 afrocoin.send(aliceWallet.address, charlieWallet.address, 5, aliceKey);
 
-console.log("\n⛏️  Mining block 1 for Miner1...");
-afrocoin.mine(miner1Wallet.address);
+console.log("\n⛏️  Mining block 1 for Miner1 (sparkcov)...");
+afrocoin.mine(MINER_PRIMARY);
 
 // Scenario 2: Bob sends to Charlie
 console.log("\n📝 Transaction 3: Bob → Charlie (3 Afrocoins)");
 afrocoin.send(bobWallet.address, charlieWallet.address, 3, bobKey);
 
-console.log("\n⛏️  Mining block 2 for Miner2...");
-afrocoin.mine(miner2Wallet.address);
+console.log("\n⛏️  Mining block 2 for Miner2 (sparkcov2)...");
+afrocoin.mine(MINER_SECONDARY);
 
 // Scenario 3: More transactions
 console.log("\n📝 Transaction 4: Charlie → Alice (2 Afrocoins)");
 afrocoin.send(charlieWallet.address, aliceWallet.address, 2, charlieKey);
 
-console.log("\n⛏️  Mining block 3 for Miner1...");
-afrocoin.mine(miner1Wallet.address);
+console.log("\n⛏️  Mining block 3 for Miner1 (sparkcov)...");
+afrocoin.mine(MINER_PRIMARY);
 
 // Display final balances
 console.log("\n═══════════════════════════════════════════════");

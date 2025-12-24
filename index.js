@@ -20,11 +20,11 @@ console.log('Wallet 2:', wallet2);
 console.log('');
 
 // --- MINING FIRST ---
-// Miner (Wallet 1) needs coins to spend
-console.log('⛏️  Wallet 1 mining to get coins...');
-myCoin.minePendingTransactions(wallet1);
+// Miner is the example account 'sparkcov'
+console.log('⛏️  Mining to miner address "sparkcov"...');
+myCoin.minePendingTransactions('sparkcov');
 
-console.log('💰 Balance of Wallet 1:', myCoin.balance(wallet1));
+console.log('💰 Balance of sparkcov:', myCoin.balance('sparkcov'));
 console.log('');
 
 // --- REAL TRANSACTION ---

@@ -1,0 +1,36 @@
+{
+  "chain": [
+    {
+      "timestamp": 1766593715670,
+      "transactions": [],
+      "previousHash": "0",
+      "hash": "6c12ebd8ec8b14c50694f9e213cf398607186b3e250c6137896c4cdf6e94aa8c",
+      "nonce": 0
+    },
+    {
+      "timestamp": 1766593715673,
+      "transactions": [
+        {
+          "fromAddress": null,
+          "toAddress": "sparkcov",
+          "amount": 25,
+          "fee": 0,
+          "timestamp": 1766593715673,
+          "isMultiSig": false,
+          "requiredSignatures": 1,
+          "totalSigners": 1,
+          "signerPublicKeys": [],
+          "signatures": [],
+          "isContractCall": false,
+          "contractAddress": null,
+          "methodName": null,
+          "methodParams": {},
+          "signature": ""
+        }
+      ],
+      "previousHash": "6c12ebd8ec8b14c50694f9e213cf398607186b3e250c6137896c4cdf6e94aa8c",
+      "hash": "0005443039e96a94380d36f6419a47beff0b3dafac478c8e3f3f473aa332f6f8",
+      "nonce": 5199
+    }
+  ]
+}

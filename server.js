@@ -45,12 +45,18 @@ app.get("/transactions", (req, res) => {
 app.post("/transact", (req, res) => {
     const { fromAddress, toAddress, amount, privateKey } = req.body;
 
-    if (!fromAddress || !toAddress || !amount || !privateKey) {
+    // Basic validation: ensure required fields present
+    if (!fromAddress || !toAddress || typeof amount === 'undefined' || !privateKey) {
         return res.status(400).json({ error: "Missing required fields" });
     }
 
+    const numericAmount = Number(amount);
+    if (!Number.isFinite(numericAmount) || numericAmount <= 0) {
+        return res.status(400).json({ error: "Amount must be a positive number" });
+    }
+
     try {
-        const tx = new Transaction(fromAddress, toAddress, Number(amount));
+        const tx = new Transaction(fromAddress, toAddress, numericAmount);
 
         // Re-create key from private key string to sign
         const EC = require('elliptic').ec;

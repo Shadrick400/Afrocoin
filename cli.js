@@ -1,4 +1,7 @@
 const Afrocoin = require("./afrocoin");
+const Wallet = require("./wallet");
+const EC = require('elliptic').ec;
+const ec = new EC('secp256k1');
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -6,7 +9,27 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+const fs = require('fs');
+const path = require('path');
+const DATA_FILE = path.resolve(__dirname, 'user_wallets.json');
+
 const afrocoin = new Afrocoin();
+const userWallets = {};
+
+// Load persisted wallets if available
+try {
+    if (fs.existsSync(DATA_FILE)) {
+        const raw = fs.readFileSync(DATA_FILE, 'utf8');
+        const parsed = JSON.parse(raw || '{}');
+        Object.assign(userWallets, parsed);
+    }
+} catch (e) {
+    console.warn('Warning: failed to load persisted wallets', e.message);
+}
+
+// Pre-create a friendly miner name 'sparkcov' for demos if not present
+if (!userWallets['sparkcov']) userWallets['sparkcov'] = { address: 'sparkcov', privateKey: null };
+
 
 console.log("\n═══════════════════════════════════════════════");
 console.log("🪙  AFROCOIN INTERACTIVE CLI");
@@ -19,7 +42,8 @@ function showMenu() {
     console.log("3. Check balance");
     console.log("4. View blockchain");
     console.log("5. View pending transactions");
-    console.log("6. Exit");
+    console.log("6. List saved wallets");
+    console.log("7. Exit");
     console.log("");
 }
 
@@ -31,8 +55,15 @@ function prompt(question) {
 
 async function createWallet() {
     const wallet = new Wallet();
-    const walletName = await prompt("Name this wallet (for easy reference): ");
-    userWallets[walletName] = wallet;
+    const walletName = (await prompt("Name this wallet (for easy reference): ")).trim();
+    userWallets[walletName] = { address: wallet.address, privateKey: wallet.privateKey };
+
+    // Persist to disk
+    try {
+        fs.writeFileSync(DATA_FILE, JSON.stringify(userWallets, null, 2), 'utf8');
+    } catch (e) {
+        console.warn('Warning: failed to persist wallet', e.message);
+    }
 
     console.log(`\n✅ Wallet "${walletName}" created!`);
     console.log(`   Address: ${wallet.address}`);
@@ -41,8 +72,8 @@ async function createWallet() {
 }
 
 async function sendCoins() {
-    const fromName = await prompt("From wallet name: ");
-    const to = await prompt("To address: ");
+    const fromName = (await prompt("From wallet name: ")).trim();
+    const to = (await prompt("To address: ")).trim();
     const amount = parseFloat(await prompt("Amount: "));
 
     if (!userWallets[fromName]) {
@@ -51,6 +82,12 @@ async function sendCoins() {
     }
 
     const fromWallet = userWallets[fromName];
+
+    if (!fromWallet.privateKey) {
+        console.log(`❌ Wallet "${fromName}" does not have a private key (cannot sign).`);
+        return;
+    }
+
     const key = ec.keyFromPrivate(fromWallet.privateKey, 'hex');
 
     try {
@@ -62,7 +99,8 @@ async function sendCoins() {
 }
 
 async function mineBlock() {
-    const miner = await prompt("Miner address: ");
+    let miner = (await prompt("Miner address (press Enter for 'sparkcov'): ")).trim();
+    if (!miner) miner = 'sparkcov';
     console.log("\n⛏️  Mining block...");
     afrocoin.mine(miner);
     console.log(`✅ Block mined! ${miner} will receive ${afrocoin.miningReward} Afrocoins`);
@@ -100,6 +138,14 @@ function viewPendingTransactions() {
     console.log("═══════════════════════════════════════════════");
 }
 
+async function listWallets() {
+    console.log('\n✅ Saved Wallets:');
+    Object.entries(userWallets).forEach(([name, w]) => {
+        const truncated = w.address ? `${w.address.substring(0, 12)}...` : 'no-address';
+        console.log(`   ${name} — ${truncated} ${w.privateKey ? '(has key)' : '(no key)'} `);
+    });
+}
+
 async function main() {
     let running = true;
 
@@ -124,12 +170,22 @@ async function main() {
                 viewPendingTransactions();
                 break;
             case "6":
+                await listWallets();
+                break;
+            case "7":
                 console.log("\n👋 Thanks for using Afrocoin!\n");
                 running = false;
                 break;
             default:
                 console.log("❌ Invalid choice. Please try again.");
         }
+    }
+
+    // Persist before exit
+    try {
+        fs.writeFileSync(DATA_FILE, JSON.stringify(userWallets, null, 2), 'utf8');
+    } catch (e) {
+        console.warn('Warning: failed to persist wallets on exit', e.message);
     }
 
     rl.close();

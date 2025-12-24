@@ -26,6 +26,11 @@ class Block {
         console.log("⛏ Block mined:", this.hash);
     }
 
+    // Compatibility getter: some demos expect `block.data` to refer to transactions
+    get data() {
+        return this.transactions;
+    }
+
     hasValidTransactions() {
         for (const tx of this.transactions) {
             if (!tx.isValid()) {

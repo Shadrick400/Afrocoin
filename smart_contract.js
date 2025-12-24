@@ -16,7 +16,7 @@ class SmartContract {
     }
 
     // Execute contract method with given parameters
-    execute(methodName, params = {}, callerAddress, blockchain) {
+    execute(methodName, params = [], callerAddress, blockchain) {
         try {
             // Create execution context
             const context = {
@@ -29,14 +29,37 @@ class SmartContract {
                 timestamp: Date.now()
             };
 
-            // Create sandboxed execution environment
+            // Create sandboxed execution environment values (used when compiling)
             const sandbox = this.createSandbox(context);
 
-            // Execute the contract method
-            const result = this.runInSandbox(this.code, methodName, sandbox);
+            // Compile the contract code into persistent methods object if not already compiled
+            if (!this._methods) {
+                // Extract function names from the code
+                const fnNames = [];
+                const re = /function\s+([A-Za-z_$][A-Za-z0-9_$]*)\s*\(/g;
+                let m;
+                while ((m = re.exec(this.code)) !== null) {
+                    fnNames.push(m[1]);
+                }
 
-            // Update state if modified
-            this.state = { ...context.state };
+                // Build export code to return an object with all discovered functions
+                const exportCode = `${this.code}\nreturn { ${fnNames.map(n => `${n}: typeof ${n} === 'function' ? ${n} : undefined`).join(', ')} };`;
+
+                const otherKeys = Object.keys(sandbox).filter(k => k !== 'params');
+                const otherValues = otherKeys.map(k => sandbox[k]);
+
+                const executionFunction = new Function(...otherKeys, exportCode);
+                this._methods = executionFunction(...otherValues);
+            }
+
+            const method = this._methods[methodName];
+            if (!method) throw new Error(`Method ${methodName} not found in contract`);
+
+            // Call the method with given parameters
+            const result = method.apply(null, params);
+
+            // Note: We don't attempt to sync closure-local variables back into this.state automatically
+            // unless the contract itself exposes state through returned results.
 
             // Record transaction
             this.transactions.push({
@@ -52,7 +75,6 @@ class SmartContract {
                 result: result,
                 state: this.state
             };
-
         } catch (error) {
             return {
                 success: false,
@@ -97,24 +119,28 @@ class SmartContract {
     }
 
     runInSandbox(code, methodName, sandbox) {
-        // Create the execution function
+        const params = Array.isArray(sandbox.params) ? sandbox.params : [];
+        // Provide the rest of sandbox as named arguments to the execution function so the contract code can close over them
+        const otherKeys = Object.keys(sandbox).filter(k => k !== 'params');
+        const otherValues = otherKeys.map(k => sandbox[k]);
+
+        // Build execution code that returns a reference to the requested method
         const executionCode = `
-            (function() {
-                ${code}
+            ${code}
 
-                // Check if method exists
-                if (typeof ${methodName} !== 'function') {
-                    throw new Error('Method ${methodName} not found in contract');
-                }
+            if (typeof ${methodName} !== 'function') {
+                throw new Error('Method ${methodName} not found in contract');
+            }
 
-                // Execute the method
-                return ${methodName}.apply(null, arguments);
-            })
+            return ${methodName};
         `;
 
-        // Execute in sandbox
-        const executionFunction = new Function(...Object.keys(sandbox), executionCode);
-        return executionFunction(...Object.values(sandbox));
+        // Execute the code to get the actual function (closed over its environment)
+        const executionFunction = new Function(...otherKeys, executionCode);
+        const methodFunction = executionFunction(...otherValues);
+
+        // Call the method with params as its arguments
+        return methodFunction.apply(null, params);
     }
 
     // Get contract info

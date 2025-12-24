@@ -27,15 +27,28 @@ npm install
 ### Running Afrocoin
 
 ```bash
-# Run the basic demo
+# Run the basic demo (mines to 'sparkcov')
 node index.js
 
-# Run the enhanced demo with multiple transactions
+# Run the enhanced demo with multiple transactions (uses 'sparkcov' / 'sparkcov2')
 node demo.js
 
-# Run the interactive CLI
+# Run the interactive CLI (miner defaults to 'sparkcov' when left blank)
 node cli.js
 ```
+
+### Quickstart: Mine as 'sparkcov'
+
+```js
+const Afrocoin = require("./afrocoin");
+const myCoin = new Afrocoin();
+
+// Mine a single block and assign reward to 'sparkcov'
+myCoin.minePendingTransactions('sparkcov');
+console.log('balance(sparkcov)=', myCoin.balance('sparkcov'));
+```
+
+Use any string as a miner address — `sparkcov` is the recommended example name for demos.
 
 ## 📁 Project Structure
 
