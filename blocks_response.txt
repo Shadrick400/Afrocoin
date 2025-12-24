@@ -1,0 +1,9 @@
+[
+    {
+        "timestamp": "01/01/2025",
+        "transactions": [],
+        "previousHash": "0",
+        "hash": "4b314817b8aee6ba690a31ee3090ce8c15c495f92b19495b6f109e8d80f24da1",
+        "nonce": 0
+    }
+]

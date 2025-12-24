@@ -1,0 +1,29 @@
+🔍 STARTING MANUAL SECURITY VERIFICATION 🔍
+
+👤 User 1 (Miner): 0460864bbc8ecfa63e96af803bdc52...
+👤 User 2 (Receiver): 046fe9b1050d6c1dac51ffafa37178...
+
+⛏️  Mining Block 1 (Get initial coins for User 1)...
+⛏ Block mined: 00070147273c7b6977c21db7b4e31cd182d96fd43e06210e6ed6711440416c3f
+BLOCK MINED SUCCESSFULLY!
+💰 Balance User 1: 25
+
+✅ TEST 1: Valid Signed Transaction (10 Coins)
+   Signature: 3045022100a0e1c80bc67b0501cecc...
+   Result: ACCEPTED (Added to pending)
+
+❌ TEST 2: Unsigned Transaction (Attempting to steal 5 Coins)
+   Result: REJECTED! Error: No signature in this transaction
+
+❌ TEST 3: Fake Signature (User 2 tries to spend User 1's money)
+   Result: BLOCKED AT SIGNING! You cannot sign transactions for other wallets!
+
+⛏️  Mining Block 2 (Process pending transactions)...
+⛏ Block mined: 0009367a88dcaaf27b3152795b8422eee4376c45f8f6d5bc299c7e5c273313e3
+BLOCK MINED SUCCESSFULLY!
+
+📊 FINAL ACCOUNTING:
+   User 1 Balance: 40
+   User 2 Balance: 10
+
+✨ SECURITY AUDIT COMPLETE.

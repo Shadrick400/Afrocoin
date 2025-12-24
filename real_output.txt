@@ -1,0 +1,21 @@
+Wallet 1: 0404d0c475271c0e18e675951e5e428e78333175fcee6940a5c11f5d55503103a964b0ab266d31c1cc5e28b89e05b24bad2041f3a81f0a36df0e35e82a309f2ad3
+Wallet 2: 0406651319a8b343af8460744ca4d7c0d94c0c30f2b7a68b1f37f0749d34d99ed7253e068467968446d2e6b639b51c28335049aaa548d102d9d043a5010f0100b7
+
+⛏️  Wallet 1 mining to get coins...
+⛏ Block mined: 000bd98f220f12466698ad77cbd2d23e91d78d10b4e2c4b6c98034def6a3094e
+BLOCK MINED SUCCESSFULLY!
+💰 Balance of Wallet 1: 25
+
+✍️  Signing transaction...
+📥 Adding transaction to chain...
+
+⛏️  Mining block to process transaction...
+⛏ Block mined: 000790589560b29a2acd5fa4b27c0992ccbc56a1f04472a8b77b7b0491ff48e3
+BLOCK MINED SUCCESSFULLY!
+
+💰 Final Balances:
+Wallet 1: 40
+Wallet 2: 10
+
+😈 Attempting to modify transaction in chain...
+Is chain valid? ❌ No! Tampering detected!

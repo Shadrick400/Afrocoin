@@ -1,0 +1,28 @@
+📡 P2P Server listening on port: 5001
+node:events:497
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at new WebSocketServer (/home/shadrick/Desktop/Afrocoin_token/node_modules/ws/lib/websocket-server.js:102:20)
+    at P2pServer.listen (/home/shadrick/Desktop/Afrocoin_token/p2p_server.js:18:24)
+    at Object.<anonymous> (/home/shadrick/Desktop/Afrocoin_token/server.js:85:11)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Module._load (node:internal/modules/cjs/loader:1263:12)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (node:events:519:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v22.20.0

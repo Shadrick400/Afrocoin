@@ -1,0 +1,30 @@
+{
+  "name": "afrocoin",
+  "version": "1.0.0",
+  "description": "A simple blockchain implementation with Proof-of-Work mining, transactions, and wallet addresses",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "demo": "node demo.js",
+    "cli": "node cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blockchain",
+    "cryptocurrency",
+    "proof-of-work",
+    "mining",
+    "bitcoin",
+    "afrocoin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "body-parser": "^2.2.1",
+    "crypto-js": "^4.2.0",
+    "elliptic": "^6.6.1",
+    "express": "^5.2.1",
+    "ws": "^8.18.3"
+  }
+}

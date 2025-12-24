@@ -1,0 +1,12 @@
+Miner Address: 0431e29b9d337d7eb369f146cf17d8daeca3276587d621e7c9ec74e16077dfa0660ce883b54baa400fa178a62225e952b7a8cc5c2d339e0b5d6e353b5bef883297
+User Address: 042ace726b83f6b742835e344f185ea515d54676f7b9480ac293422f3b5249bee1f7b6d0c72a50da624bf4627628ad3d6d27b51eaaf4bdd230250c6575227b645b
+
+⛏️  Miner mining first block...
+⛏ Block mined: 000b9ece415a5f81b1a31200c492d2fc4476af0d1d5319d0aa185d38b2924988
+📤 Sending 5 Afrocoins to User...
+⛏️  Mining to confirm transaction...
+⛏ Block mined: 00033769c006a0e479cb69f0b0d45f0faa50b74fc45969c66631c29ab3df3a47
+
+💰 Final Balances:
+Miner: 20
+User: 5

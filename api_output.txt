@@ -1,0 +1,11 @@
+📡 P2P Server listening on port: 5001
+
+🌍 API Server running on: http://localhost:3001
+   GET /blocks
+   GET /balance/:address
+   POST /transact
+   POST /mine
+
+📡 P2P Server running on port: 5001
+⛏ Block mined: 000d705aad375cf74dfed07c282a8f5185f700008c5e28a0d8d7918d7ad2fdf3
+BLOCK MINED SUCCESSFULLY!

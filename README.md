@@ -111,3 +111,4 @@ MIT - Feel free to use this for learning!
 
 **Built with ❤️ for learning blockchain technology**
 # Afrocoin
+# Afrocoin

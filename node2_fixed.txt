@@ -1,0 +1,250 @@
+🚀 Starting Afrocoin Node on port 5002...
+📡 P2P Server listening on port: 5002
+👤 Miner Identity: 04d6be74aee5c393d19d...
+🤝 Socket connected
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000a311300d03bf53517ac3ba013fc416f9b54f718f7f37a4ed82b9cb7275f3f
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 6
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 00046760357cfcca1425b345eb76174dd7570bac209d2fde4cb5a17f065f5c66
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 9
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 00099c1608d239fbf9beae1ccf64a1f5d456deeda9e5a3c48d9a01e69715e4c1
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 11
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0001c6703e769353123b77834a679ed055f7a92069a1b5c2da42a8c46522f1b7
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 13
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0008b5eb3e614f0d245030a4abcbb445300065c1a59019b53046c62fef379c3e
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 16
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000c03a68718140d2363560a200acf787606de40e7f435f9ec8ab08d36be4876
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 18
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000992a80192a8ee96f8bb08371d2024339f7da9ee1101a0c9cbc96838c214e8
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 20
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 00007341204479e005a52332deafc15029420fa9902de184e39c3cfc9db1cc6e
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 23
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0005d166ed478c466186ed48df942a6b4f68aa8a2a68298554e092f1f3fb3b50
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 25
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000a159058cf19827ff18892d81a387daa7ddfcf8a77680280ac0cfb5efabaaa
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 27
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0003f5998c6f0b53ffed30e1482a08989e1c290e566cf0da5d7c8328bfd1530b
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 30
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000f6c387cb04201de293b5ca71648a0f9ddc45b88df9b7b783f96158893d0ed
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 32
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0005ffadbf28fb68de04c19e659888e55c2d639752a779da3f6251437aff4180
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 34
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 00040cd04628ca6d56fe5f2f8d65ed4d858e7e5472c995e41797842480753602
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 37
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000167515cefb0d080ee1d505db2d37d61995496571924e07c4eef55cdc99bff
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 39
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000b3d8c0754ef17042487bfdbe5485bc81a0c7c800cd67aedff431dc5211bfd
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 41
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000908997097e07b18748a7f0e858e70a83ed2726896e8f7fbb8db9b9503f701
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 44
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000042fb71e363ba7b7671323ef36e50a28d854510f32a5cff20e9d6b9259c7d
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 46
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0006e5e6df906d33fc3ad7f3e7c9891ff0076a7d130006ed4d9fa2545a53125b
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 48
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0003ef1970bf1248857ab3d4acc6e836bfc23647297fa6d848ae8ca6d8561710
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 50
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0009d8a67e79a62aedef63d25f54f0e4dcf53f2ed78ad2be777c68518049077b
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 53
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000b9fd7c6e9328f737a9493c1827560503bd48019ad7b03568419825ef091c4
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 55
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000b7bc5b24d4696b64753defa246142800d506ccf622c8b15fe43706db438e7
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 57
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000a6875ddaf62c1d4c27ef19a5a34db8f8a047773c65039a394acd59d5722eb
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 60
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000d6f332dcc4e036ac26f0b45fbe2c5d33e2ffccbadc14a70b9502131bc59ed
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 62
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0006bb2a6fa193f9bf48ea285530bc8f358ea230f6b054c0d4446d68eb19f576
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 64
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Replacing blockchain with the new chain.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000b806243513d4561849bae9279629e9b8069d6096c95e2c4197e760cc88fd6
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 67

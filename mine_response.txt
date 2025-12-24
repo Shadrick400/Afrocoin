@@ -1,0 +1,18 @@
+{
+    "message": "Block mined successfully",
+    "block": {
+        "timestamp": 1766534856798,
+        "transactions": [
+            {
+                "fromAddress": null,
+                "toAddress": "04f14638e3ec41a8b79641bcdedfdee9ad111a9f52ebf017217c3854db33cec5471decfc59541459ea5600c900370cc361a960910611993299595aa992ac6fc510",
+                "amount": 25,
+                "timestamp": 1766534856798,
+                "signature": ""
+            }
+        ],
+        "previousHash": "4b314817b8aee6ba690a31ee3090ce8c15c495f92b19495b6f109e8d80f24da1",
+        "hash": "000d705aad375cf74dfed07c282a8f5185f700008c5e28a0d8d7918d7ad2fdf3",
+        "nonce": 10640
+    }
+}

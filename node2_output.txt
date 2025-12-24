@@ -1,0 +1,31 @@
+🚀 Starting Afrocoin Node on port 5002...
+📡 P2P Server listening on port: 5002
+👤 Miner Identity: 043b398af117f03acaea...
+🤝 Socket connected
+📥 Received longer chain. Replacing current chain...
+Received chain is invalid.
+✅ Chain replaced successfully!
+📥 Received longer chain. Replacing current chain...
+Received chain is invalid.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000df37c6b85f5841cc33339229d3c64ae3b9d715780a72c758656806ff5c528
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 2
+📥 Received longer chain. Replacing current chain...
+Received chain is invalid.
+✅ Chain replaced successfully!
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 000b28982b122b90e967982610525e15800f51dc4dc876d04ea55fbd4e421a73
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 3
+
+⛏️  Node 5002 is mining a block...
+⛏ Block mined: 0006fe92a2c1afcf9ebdf4eaa13da9da53fe2bc50f17ee99c82f45d171f30be1
+BLOCK MINED SUCCESSFULLY!
+⛓️  Chain length: 4
+📥 Received longer chain. Replacing current chain...
+Received chain is invalid.
+✅ Chain replaced successfully!

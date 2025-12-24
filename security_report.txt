@@ -1,0 +1,9 @@
+🛡️ STARTING SECURITY PENETRATION TEST 🛡️
+
+👤 Attacker Wallet: 04425b9f817eacb05273e6e3a30d7e...
+
+⚔️  ATTEMPT 1: Sending 1000 coins with 0 balance...
+✅ SUCCESS: Network REJECTED transaction: Not enough balance
+
+⚔️  ATTEMPT 2: Sending -50 coins (Stealing via math)...
+✅ SUCCESS: Network REJECTED transaction: Transaction amount must be higher than 0
